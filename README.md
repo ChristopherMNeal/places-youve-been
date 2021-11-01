@@ -5,7 +5,7 @@ place1.name
 Expected Output: "Portland"
 
 Describe: Place.prototype.addLandmark()
-Test: It should push a new landmark value to our landmark key.
+Test: It should push a new landmark value to our landmarks key.
 Code: portland.addLandmark("Portlandia Statue")
   portland.landmarks[0];
 Expected Output: "Portlandia Statue"
@@ -14,11 +14,16 @@ Test: It should return false if the input is not a string.
 Code: portland.addLandmark(true)
 Expected Output: false
 
-Test: 
-Code: 
-Expected Output:
 
+Describe: Place.prototype.addNote()
+Test: It should push a new note value to our notes key.
+Code: portland.addNote("Winter is rainy")
+  portland.notes[0];
+Expected Output: "Winter is rainy"
 
+Test: It should return false if the input is not a string.
+Code: portland.addNote(true)
+Expected Output: false
 
 
 
