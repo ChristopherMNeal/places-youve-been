@@ -29,8 +29,8 @@ Place.prototype.addNote = function(note) {
   this.notes.push(note);
 };
 
-Place.prototype.generateCard = function() {
-  return "<div class='place-card'><h3 class='card-title'>" + this.name + "</h3><div class='hidden'><h5 class= 'location'>" + this.location + "</h5><p class='time-of-year'>" + this.timeOfYear + "</p><ul class= 'landmarks'>" + toList(this.landmarks) + "</ul><ul class='notes'>" + toList(this.notes) + "</ul></div></div>";
+Place.prototype.generateCard = function(id) {
+  return "<div class='place-card'><h3 class='card-title' id=" + id + ">" + this.name + "</h3><div class='hidden'><h5 class= 'location'>" + this.location + "</h5><p class='time-of-year'>" + this.timeOfYear + "</p><ul class= 'landmarks'>" + toList(this.landmarks) + "</ul><ul class='notes'>" + toList(this.notes) + "</ul></div></div>";
 }
 
 function TomeOfPlaces() {
@@ -81,9 +81,12 @@ $(document).ready(function() {
         return element.trim();
       }),
     });
-    console.log(newPlace);
     theBook.addPlace(newPlace);
-    $(".box").append(theBook.contents[theBook.contents.length-1].generateCard());
+    $(".box").append(theBook.contents[theBook.contents.length-1].generateCard(theBook.contents.length-1));
+    // attach event handler
+    $("#" + (theBook.contents.length-1)).click(function() {
+      $(this.nextElementSibling).slideToggle();
+    });
   });
 
   $(".card-title").click(function() {
