@@ -1,10 +1,14 @@
 Describe: Place()
 Test: It should return an object with the properties of name, location, landmarks, time of year, notes.
-Code: place1 = new Place("Portland", "Oregon", "Portlandia Statue", "August", "Don't go during winter")
+Code: portlands = new Place("Portland", "Oregon", "Portlandia Statue", "August", "Don't go during winter")
 place1.name
 Expected Output: "Portland"
 
-
+Describe: Place.prototype.addLandmark()
+Test: It should push a new landmark value to our landmark key.
+Code: portland.addLandmark("Portlandia Statue")
+  portland.landmarks[0];
+Expected Output: "Portlandia Statue"
 
 
 

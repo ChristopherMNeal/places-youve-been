@@ -6,4 +6,8 @@ function Place({name = "", location = "", landmarks = [], timeOfYear = "", notes
   this.notes = notes;
 }
 
+Place.prototype.addLandmark = function(landmark) {
+  this.landmarks.push(landmark);
+};
+
 portland = new Place({name : 'Portland', location : 'OR', timeOfYear : "August"});
