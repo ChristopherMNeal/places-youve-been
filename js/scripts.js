@@ -7,6 +7,9 @@ function Place({name = "", location = "", landmarks = [], timeOfYear = "", notes
 }
 
 Place.prototype.addLandmark = function(landmark) {
+  if (typeof landmark != "string") {
+    return false;
+  }
   this.landmarks.push(landmark);
 };
 

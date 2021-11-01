@@ -10,8 +10,13 @@ Code: portland.addLandmark("Portlandia Statue")
   portland.landmarks[0];
 Expected Output: "Portlandia Statue"
 
+Test: It should return false if the input is not a string.
+Code: portland.addLandmark(true)
+Expected Output: false
 
-
+Test: 
+Code: 
+Expected Output:
 
 
 
