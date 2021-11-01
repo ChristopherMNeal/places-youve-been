@@ -1,3 +1,20 @@
 .hidden {
   display: none;
 }
+
+input {
+  float: right;
+  display: block;
+}
+
+textarea {
+  float: right;
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.container {
+  max-width: 95%;
+  margin-top: 5%;
+}

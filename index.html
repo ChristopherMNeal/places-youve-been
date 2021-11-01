@@ -8,7 +8,39 @@
   <title>Places You've Been</title>
 </head>
 <body>
-  <div class="box">
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+        <form id="add-place">
+          <button type="submit" disabled style="display: none" aria-hidden="true"></button>
+          <div class="form-group">
+            <label for="name">Place name:</label>
+            <input id="name" type="text">
+          </div>
+          <div class="form-group">
+            <label for="location">Location:</label>
+            <input id="location" type="text">
+          </div>
+          <div class="form-group">
+            <label for="landmarks">Landmarks (separated by commas):</label>
+            <input id="landmarks" type="text">
+          </div>
+          <div class="form-group">
+            <label for="toy">Best time to visit:</label>
+            <input id="toy" type="text">
+          </div>
+          <div class="form-group">
+            <label for="notes">Notes (separated by commas):</label>
+            <input id="notes" type="text">
+          </div>
+          <button type="submit" class="btn btn-dark">Add place</button>
+        </form>
+      </div>
+      <div class="col-8">
+        <div class="box">
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 </html>

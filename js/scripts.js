@@ -68,6 +68,23 @@ $(document).ready(function() {
     $(".box").append(i.generateCard());
   }
   
+  $("#add-place").submit(function(event) {
+    event.preventDefault();
+    let newPlace = new Place({
+      name: $("input#name").val(),
+      location: $("input#location").val(),
+      landmarks: $("input#landmarks").val().split(",").map(function(element) {
+        return element.trim();
+      }),
+      timeOfYear: $("input#toy").val(),
+      notes: $("input#notes").val().split(",").map(function(element) {
+        return element.trim();
+      }),
+    });
+    console.log(newPlace);
+    theBook.addPlace(newPlace);
+    $(".box").append(theBook.contents[theBook.contents.length-1].generateCard());
+  });
 
   $(".card-title").click(function() {
     $(this.nextElementSibling).slideToggle();
