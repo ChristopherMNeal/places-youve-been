@@ -20,8 +20,14 @@ Place.prototype.addNote = function(note) {
   this.notes.push(note);
 };
 
+
+
 portland = new Place({name : 'Portland', location : 'OR', timeOfYear : "August"});
 
 portland.addNote("Winter is rainy");
 portland.notes[0];
 portland.addNote(true);
+
+$(".place-card").click(function() {
+  this.firstChild.slideToggle();
+});
